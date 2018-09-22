@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
     table.binary('image');
     table.float('price');
     table.integer('discount');
+    table.integer('impression');
     table.integer('restaurant_id').references('restaurants.id');
   });
 };

@@ -11,11 +11,11 @@ const ENV          = process.env.ENV || "development";
 const knexConfig   = require("./knexfile");
 const knex         = require("knex")(knexConfig[ENV]);
 
-
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/api/users');
+const indexRouter         = require('./routes/index');
+const usersRouter         = require('./routes/api/users');
+const restaurantsRouter   = require('./routes/api/restaurants');
 const couponBatchesRouter = require('./routes/api/coupon_batches');
-const restaurantsRouter = require('./routes/api/restaurants');
+const couponDetailsRouter = require('./routes/api/coupon_details');
 
 const app = express();
 
@@ -32,8 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter(knex));
-app.use('/api/coupon_batches', couponBatchesRouter(knex));
 app.use('/api/restaurants', restaurantsRouter(knex));
+app.use('/api/coupon_batches', couponBatchesRouter(knex));
+app.use('/api/coupon_details', couponDetailsRouter(knex));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
