@@ -14,6 +14,8 @@ const knex         = require("knex")(knexConfig[ENV]);
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/api/users');
+const couponBatchesRouter = require('./routes/api/coupon_batches');
+const restaurantsRouter = require('./routes/api/restaurants');
 
 const app = express();
 
@@ -30,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter(knex));
+app.use('/api/coupon_batches', couponBatchesRouter(knex));
+app.use('/api/restaurants', restaurantsRouter(knex));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
