@@ -15,7 +15,7 @@ module.exports = (knex) => {
 
   router.post("/:id", (req, res) => {
       knex
-        .returning("*")
+        .select("*")
         .from("coupon_details")
         .where({'coupon_details.id':req.params.id})
         .update('is_redeemed',true)
@@ -24,6 +24,8 @@ module.exports = (knex) => {
           res.json(result);
       });
   })
+
+
 
   return router;
 }
