@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.datetime('timestamp');
     table.integer('time_limit');
     table.string('quantity');
-    table.binary('image');
+    table.string('image');
     table.float('price');
     table.integer('discount');
     table.integer('impression');
