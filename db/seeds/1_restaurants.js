@@ -7,10 +7,8 @@ exports.seed = function(knex, Promise) {
       return knex("restaurants").insert([
         {
           name: "Fonda Ioannidis",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "41100 Nadene Mcneish",
@@ -22,10 +20,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Beau Mahrenholz",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "695 Oralia Mrvan",
@@ -37,10 +33,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Gabriella Cachero",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "8088 Rich Bohorquez",
@@ -52,10 +46,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Simonne Rutten",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "6084 Giovanni Reper",
@@ -67,10 +59,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Jackqueline Ogen",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "7799 Denyse Schoenfeld",
@@ -82,10 +72,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Mignon Fromdahl",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "847 Theodora Mcglown",
@@ -97,10 +85,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Nannie Schorsch",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "881 Blake Dellano",
@@ -112,10 +98,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Akilah Lightning",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "3276 Joanne Egloff",
@@ -127,10 +111,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Carole Laclaire",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "1935 Tiffani Davern",
@@ -142,10 +124,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Neda Sturdy",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "1765 Laticia Cenci",
@@ -157,10 +137,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Shirlene Dettinger",
-          Yelp_image_URL:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
-          Yelp_business_URL:
-            "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
+          Yelp_image_URL: "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
+          Yelp_business_URL: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=Jok6JM5JDfNTuRmFGEnEJg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=Jok6JM5JDfNTuRmFGEnEJg",
           rating: 3.5,
           categories: "Asian, French, Thai, Japanese",
           address: "9878 Deshawn Schlechten",

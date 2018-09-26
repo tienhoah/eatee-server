@@ -4,14 +4,14 @@ exports.up = function(knex, Promise) {
     table.string("name");
     table.string("Yelp_image_URL");
     table.string("Yelp_business_URL");
-    table.decimal("rating", 1, 1);
+    table.specificType("rating", 'double precision');
     table.string("categories");
     table.string("address");
     table.string("city");
     table.string("country");
-    table.string("phone", 10);
-    table.decimal("longitude", 11, 8);
-    table.decimal("latitude", 10, 8);
+    table.string("phone");
+    table.specificType("longitude", 'double precision');
+    table.specificType("latitude", 'double precision');
   });
 };
 
