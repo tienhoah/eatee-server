@@ -22,6 +22,26 @@ module.exports = (knex) => {
       });
   });
 
+  router.post("/", (req, res) => {
+    knex('restaurants')
+    .returning("id")
+      .insert({
+        name: req.body.name,
+        Yelp_image_URL: req.body.Yelp_image_URL,
+        Yelp_business_URL: req.body.Yelp_business_URL,
+        rating: req.body.rating,
+        categories: req.body.categories,
+        address: req.body.address,
+        city: req.body.city,
+        country: req.body.country,
+        phone: req.body.phone,
+        longitude: req.body.longitude,
+        latitude: req.body.latitude
+      }).then((results) => {
+        res.json(results);
+      });
+  });
+
 
   router.get("/:id/coupon_batches", (req, res) => {
     knex
@@ -53,6 +73,8 @@ module.exports = (knex) => {
         });
     });
   });
+
+  
 
   return router;
 };
