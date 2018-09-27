@@ -13,6 +13,17 @@ module.exports = (knex) => {
       });
   });
 
+  router.get("/:id", (req, res) => {
+    knex
+      .select("*")
+      .from("users")
+      .where({'users.id':req.params.id})
+      .then((results) => {
+        res.json(results);
+      });
+  });
+
+
   router.get("/:id/coupon_list", (req, res) => {
     knex
     .select("*")
