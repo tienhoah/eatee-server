@@ -13,11 +13,11 @@ module.exports = (knex) => {
       });
   });
 
-  router.get("/:id", (req, res) => {
+  router.get("/fbid/:id", (req, res) => {
     knex
       .select("*")
       .from("users")
-      .where({'users.id':req.params.id})
+      .where({'users.facebook_id':req.params.id})
       .then((results) => {
         res.json(results);
       });
