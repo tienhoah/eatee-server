@@ -46,6 +46,7 @@ module.exports = (knex) => {
     knex
     .select("*")
     .from('coupon_batches')
+    .join('restaurants', 'coupon_batches.restaurant_id', '=', 'restaurants.id')
     .join('coupon_details', 'coupon_batches.id', '=', 'coupon_details.coupon_batch_id')
     .where({'coupon_details.user_id':req.params.id})
     .then((results) => {
