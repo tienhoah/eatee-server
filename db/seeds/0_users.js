@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('users').insert([
         {facebook_id: "32109823327681728",first_name: "Roselle", last_name: "Alfredia",email: "palaeostriatum@unbarricade.co.uk", phone: "8228339745",age: "44", sex: "male", city: "Philippines" },
-        {facebook_id: "10210734403791332",first_name: "Michael", last_name: "Otelia",email: "malaccan@crumblement.com", phone: "6681123478",age: "88", sex: "male", city: "Estonia" },
+        {facebook_id: "23239919299999192",first_name: "Michael", last_name: "Otelia",email: "malaccan@crumblement.com", phone: "6681123478",age: "88", sex: "male", city: "Estonia" },
         {facebook_id: "32193923898928932",first_name: "Kara", last_name: "Cora",email: "introitus@mirthfully.com", phone: "8462397182",age: "26", sex: "male", city: "United Kingdom" },
         {facebook_id: "12090947584534578",first_name: "Lorna", last_name: "Tammara",email: "scylliorhinoid@convertend.org", phone: "9877242998",age: "40", sex: "male", city: "Tonga" },
         {facebook_id: "12309588990023235",first_name: "Kieth", last_name: "Lita",email: "eclair@phylogeny.edu", phone: "4753742482",age: "17", sex: "female", city: "Egypt" },
