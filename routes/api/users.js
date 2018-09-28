@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = (knex) => {
+  //select all users
   router.get("/", (req, res) => {
     knex
       .select("*")
@@ -13,6 +14,7 @@ module.exports = (knex) => {
       });
   });
 
+  //save user data to database
   router.post("/", (req, res) => {
     knex('users')
     .returning("*")
@@ -30,7 +32,7 @@ module.exports = (knex) => {
       });
   });
 
-
+  //get user facebook id
   router.get("/fbid/:id", (req, res) => {
     knex
       .select("*")
@@ -41,7 +43,7 @@ module.exports = (knex) => {
       });
   });
 
-
+  //list all coupons for a user
   router.get("/:id/coupon_list", (req, res) => {
     knex
     .select("*")
@@ -56,6 +58,18 @@ module.exports = (knex) => {
         res.json(results);
       }
     })
+  });
+
+  //user swipe right to add coupon to their collection
+ router.post("/:id/add/:coupon_id", (req, res) => {
+  knex
+    .select("*")
+    .from("coupon_details")
+    .where({'coupon_details.id':req.params.coupon_id})
+    .update({'swipe':true, 'user_id':req.params.id})
+    .then((result) => {
+      res.json(result);
+    });
   });
 
   return router;
