@@ -61,13 +61,15 @@ module.exports = (knex) => {
   });
 
   //user swipe right to add coupon to their collection
- router.post("/:id/add/:coupon_id", (req, res) => {
+ router.post("/add", (req, res) => {
   knex
     .select("*")
     .from("coupon_details")
     .where({'coupon_details.id':req.params.coupon_id})
-    .update({'swipe':req.body.swipe, 'user_id':req.params.id})
-    .then((result) => {
+    .update({
+      'swipe':req.body.swipe,
+      'user_facebook_id':req.body.facebook_id
+    }).then((result) => {
       res.json(result);
     });
   });
