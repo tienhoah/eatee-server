@@ -66,7 +66,7 @@ module.exports = (knex) => {
     .select("*")
     .from("coupon_details")
     .where({'coupon_details.id':req.params.coupon_id})
-    .update({'swipe':true, 'user_id':req.params.id})
+    .update({'swipe':req.body.swipe, 'user_id':req.params.id})
     .then((result) => {
       res.json(result);
     });
