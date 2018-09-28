@@ -83,6 +83,7 @@ exports.seed = function(knex, Promise) {
           impression: 79,
           restaurant_id: 2
         }
+    
       ]);
     });
 };
