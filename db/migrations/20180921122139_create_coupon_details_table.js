@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
     table.boolean('is_redeemed');
     table.boolean('swipe');
     table.integer('coupon_batch_id').references('coupon_batches.id');
-    table.integer('user_id').references('users.id');
+    table.string('user_facebook_id').references('users.facebook_id');
   });
 };
 

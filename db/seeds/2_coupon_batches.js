@@ -6,8 +6,7 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex("coupon_batches").insert([
         {
-          name: "Burger",
-          description: "Yummm",
+          dish_name: "Burger",
           timestamp: new Date("2017-07-18T20:50:53+04:00").toISOString(),
           time_limit: 37,
           quantity: 10,
@@ -19,8 +18,7 @@ exports.seed = function(knex, Promise) {
           restaurant_id: 1
         },
         {
-          name: "Fries",
-          description: "Fat",
+          dish_name: "Fries",
           timestamp: new Date("2010-03-09T20:36:59-07:00").toISOString(),
           time_limit: 112,
           quantity: 53,
@@ -32,8 +30,7 @@ exports.seed = function(knex, Promise) {
           restaurant_id: 2
         },
         {
-          name: "Yummy Salad",
-          description: "Healthy",
+          dish_name: "Yummy Salad",
           timestamp: new Date("2014-01-11T03:54:50+01:00").toISOString(),
           time_limit: 84,
           quantity: 17,
@@ -45,8 +42,7 @@ exports.seed = function(knex, Promise) {
           restaurant_id: 3
         },
         {
-          name: "Chicken Nuggets",
-          description: "YAS",
+          dish_name: "Chicken Nuggets",
           timestamp: new Date("2017-06-28T16:16:51+08:00").toISOString(),
           time_limit: 72,
           quantity: 83,
@@ -58,8 +54,7 @@ exports.seed = function(knex, Promise) {
           restaurant_id: 4
         },
         {
-          name: "Swarma",
-          description: "Good",
+          dish_name: "Swarma",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: 19,
           quantity: 83,
@@ -71,8 +66,7 @@ exports.seed = function(knex, Promise) {
           restaurant_id: 2
         },
         {
-          name: "Candy",
-          description: "Sugar",
+          dish_name: "Candy",
           timestamp: new Date("2022-11-20T06:56:01-08:00").toISOString(),
           time_limit: 35,
           quantity: 47,
