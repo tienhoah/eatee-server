@@ -7,6 +7,7 @@ exports.seed = function(knex, Promise) {
       return knex("coupon_batches").insert([
         {
           dish_name: "Burger",
+          description: "Yummy burger",
           timestamp: new Date("2017-07-18T20:50:53+04:00").toISOString(),
           time_limit: 37,
           quantity: 10,
@@ -19,6 +20,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           dish_name: "Fries",
+          description: "Yummy burger",
           timestamp: new Date("2010-03-09T20:36:59-07:00").toISOString(),
           time_limit: 112,
           quantity: 53,
@@ -31,6 +33,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           dish_name: "Yummy Salad",
+          description: "Yummy burger",
           timestamp: new Date("2014-01-11T03:54:50+01:00").toISOString(),
           time_limit: 84,
           quantity: 17,
@@ -43,6 +46,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           dish_name: "Chicken Nuggets",
+          description: "Yummy burger",
           timestamp: new Date("2017-06-28T16:16:51+08:00").toISOString(),
           time_limit: 72,
           quantity: 83,
@@ -55,6 +59,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           dish_name: "Swarma",
+          description: "Yummy burger",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: 19,
           quantity: 83,
@@ -67,6 +72,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           dish_name: "Candy",
+          description: "Yummy burger",
           timestamp: new Date("2022-11-20T06:56:01-08:00").toISOString(),
           time_limit: 35,
           quantity: 47,

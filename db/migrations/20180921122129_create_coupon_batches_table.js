@@ -1,8 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("coupon_batches", function(table) {
     table.increments();
-
-    table.string("name");
+    table.string("dish_name");
     table.string("description");
     table.datetime("timestamp");
     table.integer("time_limit");
