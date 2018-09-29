@@ -14,18 +14,26 @@ module.exports = knex => {
   });
 
   router.post("/", (req, res) => {
+    console.log("post coupon_batches:", req.body);
     knex("coupon_batches")
       .returning("id")
       .insert({
         dish_name: req.body.dish_name,
         description: req.body.description,
-        image: null,
         timestamp: req.body.timestamp,
         time_limit: req.body.time_limit,
         quantity: req.body.quantity,
         image: req.body.image,
         price: req.body.price,
-        discount: req.body.discount
+        impression: 0,
+        discount: req.body.discount,
+        restaurant_id: 2
+      })
+      .then(results => {
+        res.json(results);
+      })
+      .catch(error => {
+        console.log(error);
       });
   });
 
