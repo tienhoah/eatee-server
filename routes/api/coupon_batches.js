@@ -8,6 +8,7 @@ module.exports = (knex) => {
     knex
       .select("*")
       .from("coupon_batches")
+      .where('quantity', '>', 0)
       .then((results) => {
         res.json(results);
       });
