@@ -26,11 +26,11 @@ module.exports = (knex) => {
   //select first coupon where user_id is null and swipe is false
   router.get("/:id/coupon_details", (req, res) => {
     knex
-      .first("*")
-      .from("coupon_batches")
-      .join("coupon_details", {'coupon_batches.id': 'coupon_details.coupon_batch_id'})
+      .first("coupon_details.id")
+      .from("coupon_details")
+      .join("coupon_batches", {'coupon_batches.id': 'coupon_details.coupon_batch_id'})
       .where({'coupon_batch_id': req.params.id})
-      .andWhere({'user_id':null})
+      .andWhere({'user_facebook_id':null})
       .andWhere({'swipe':false})
       .then((results) => {
         res.json(results);
