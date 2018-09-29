@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2017-07-18T20:50:53+04:00").toISOString(),
           time_limit: 37,
-          quantity: 10,
+          quantity: 5,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 72.1203,
@@ -23,7 +23,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2010-03-09T20:36:59-07:00").toISOString(),
           time_limit: 112,
-          quantity: 53,
+          quantity: 4,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 13.055,
@@ -36,7 +36,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2014-01-11T03:54:50+01:00").toISOString(),
           time_limit: 84,
-          quantity: 17,
+          quantity: 4,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 92.8963,
@@ -49,7 +49,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2017-06-28T16:16:51+08:00").toISOString(),
           time_limit: 72,
-          quantity: 83,
+          quantity: 3,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 67.6934,
@@ -62,7 +62,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: 19,
-          quantity: 83,
+          quantity: 2,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 12.0116,
@@ -75,7 +75,7 @@ exports.seed = function(knex, Promise) {
           description: "Yummy burger",
           timestamp: new Date("2022-11-20T06:56:01-08:00").toISOString(),
           time_limit: 35,
-          quantity: 47,
+          quantity: 2,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/NCX50ST3Hjg7y8wTcwQXog/o.jpg",
           price: 65.3683,
