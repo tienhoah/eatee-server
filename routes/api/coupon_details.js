@@ -13,6 +13,13 @@ module.exports = (knex) => {
       });
   });
 
+  router.get("/:id", (req, res) => {
+    knex("coupon_details")
+      where({"coupon_details.coupon_batch_id":req.params.id})
+      having('swipe', '=', true)
+      .count()
+  })
+
   router.post("/redeem/:id", (req, res) => {
     knex
       .select("*")
