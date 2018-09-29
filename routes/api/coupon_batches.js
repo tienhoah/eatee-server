@@ -52,5 +52,18 @@ module.exports = (knex) => {
         });
   })
 
+  //update quantity
+  router.post("/:id/quantity", (req, res) => {
+    knex
+      .returning("*")
+      .from("coupon_batches")
+      .where({'coupon_batches.id':req.params.id})
+      .update({
+        'quantity': req.body.quantity
+      }).then((result) => {
+        res.json(result);
+      });
+  });
+
   return router;
 };
