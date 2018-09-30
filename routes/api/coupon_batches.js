@@ -40,6 +40,18 @@ module.exports = knex => {
       });
   });
 
+  //get swipe count for a coupon batch
+  router.get("/:id/swipe", (req, res) => {
+    knex
+      .count("*")
+      .from("coupon_details")
+      .where({'coupon_details.coupon_batch_id':req.params.id})
+      .andWhere({'swipe':true})
+      .then(result => {
+        res.json(result);
+      })
+  })
+
   router.post("/:id/coupon_details", (req, res) => {
     knex
       .returning("*")
@@ -65,6 +77,20 @@ module.exports = knex => {
       .where({ "coupon_batches.id": req.params.id })
       .update({
         quantity: req.body.quantity
+      })
+      .then(result => {
+        res.json(result);
+      });
+  });
+
+  //update impression
+  router.post("/:id/impression", (req, res) => {
+    knex
+      .returning("*")
+      .from("coupon_batches")
+      .where({ "coupon_batches.id": req.params.id })
+      .update({
+        impression: req.body.impression
       })
       .then(result => {
         res.json(result);
