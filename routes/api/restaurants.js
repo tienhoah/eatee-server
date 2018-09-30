@@ -35,6 +35,7 @@ module.exports = knex => {
         city: req.body.city,
         country: req.body.country,
         phone: req.body.phone,
+        yelp_id: req.body.yelp_id,
         longitude: req.body.longitude,
         latitude: req.body.latitude
       })
