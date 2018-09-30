@@ -13,6 +13,16 @@ module.exports = (knex) => {
       });
   });
 
+  router.get("/users/:id", (req, res) => {
+    knex
+      .from("coupon_details")
+      .where({'user_facebook_id':req.params.id})
+      .count('id')
+      .then((result) => {
+        res.json(result);
+      });
+  });
+
   router.post("/redeem/:id", (req, res) => {
     knex
       .select("*")

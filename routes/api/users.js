@@ -50,7 +50,7 @@ module.exports = (knex) => {
     .from('coupon_batches')
     .join('restaurants', 'coupon_batches.restaurant_id', '=', 'restaurants.id')
     .join('coupon_details', 'coupon_batches.id', '=', 'coupon_details.coupon_batch_id')
-    .where({'coupon_details.user_id':req.params.id})
+    .where({'coupon_details.user_facebook_id':req.params.id})
     .then((results) => {
       if (!results.length) {
         res.json({error: "Not found"});
@@ -61,15 +61,16 @@ module.exports = (knex) => {
   });
 
   //user swipe right to add coupon to their collection
- router.post("/add", (req, res) => {
+ router.post("/add/coupon/:id", (req, res) => {
   knex
-    .select("*")
+    .returning("*")
     .from("coupon_details")
-    .where({'coupon_details.id':req.params.coupon_id})
+    .where({'coupon_details.id':req.params.id})
     .update({
-      'swipe':req.body.swipe,
+      'swipe':true,
       'user_facebook_id':req.body.facebook_id
-    }).then((result) => {
+    })
+    .then((result) => {
       res.json(result);
     });
   });
