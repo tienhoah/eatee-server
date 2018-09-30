@@ -8,14 +8,14 @@ module.exports = knex => {
     knex
       .select("*")
       .from("coupon_batches")
-      .where('quantity','>',0)
+      .where("quantity", ">", 0)
       .then(results => {
         res.json(results);
       });
   });
 
   router.post("/", (req, res) => {
-    console.log("post coupon_batches:", req.body);
+    // console.log("post coupon_batches:", req.body);
     knex("coupon_batches")
       .returning("id")
       .insert({
@@ -53,11 +53,13 @@ module.exports = knex => {
     knex
       .first("coupon_details.id")
       .from("coupon_details")
-      .join("coupon_batches", {'coupon_batches.id': 'coupon_details.coupon_batch_id'})
-      .where({'coupon_batch_id': req.params.id})
-      .andWhere({'user_facebook_id':null})
-      .andWhere({'swipe':false})
-      .then((results) => {
+      .join("coupon_batches", {
+        "coupon_batches.id": "coupon_details.coupon_batch_id"
+      })
+      .where({ coupon_batch_id: req.params.id })
+      .andWhere({ user_facebook_id: null })
+      .andWhere({ swipe: false })
+      .then(results => {
         res.json(results);
       });
   });
@@ -84,10 +86,11 @@ module.exports = knex => {
     knex
       .returning("*")
       .from("coupon_batches")
-      .where({'coupon_batches.id':req.params.id})
+      .where({ "coupon_batches.id": req.params.id })
       .update({
-        'quantity': req.body.quantity
-      }).then((result) => {
+        quantity: req.body.quantity
+      })
+      .then(result => {
         res.json(result);
       });
   });
