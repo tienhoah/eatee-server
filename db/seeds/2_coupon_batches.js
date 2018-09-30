@@ -42,7 +42,7 @@ exports.seed = function(knex, Promise) {
           price: 92.8963,
           discount: 6,
           impression: 62,
-          restaurant_id: 3
+          restaurant_id: 1
         },
         {
           dish_name: "Chicken Nuggets",
@@ -55,7 +55,7 @@ exports.seed = function(knex, Promise) {
           price: 67.6934,
           discount: 15,
           impression: 70,
-          restaurant_id: 4
+          restaurant_id: 2
         },
         {
           dish_name: "Swarma",

@@ -10,6 +10,7 @@ exports.up = function(knex, Promise) {
     table.string("city");
     table.string("country");
     table.string("phone");
+    table.string("yelp_id").unique();
     table.specificType("longitude", 'double precision');
     table.specificType("latitude", 'double precision');
   });

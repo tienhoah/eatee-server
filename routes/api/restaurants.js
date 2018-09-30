@@ -43,6 +43,17 @@ module.exports = knex => {
       });
   });
 
+  //get restaurant id
+  router.get("/yelpid/:id", (req, res) => {
+    knex
+      .select("*")
+      .from("restaurants")
+      .where({'restaurants.yelp_id':req.params.id})
+      .then((results) => {
+        res.json(results);
+      });
+  });
+
   router.get("/:id/coupon_batches", (req, res) => {
     knex
       .select("*")
