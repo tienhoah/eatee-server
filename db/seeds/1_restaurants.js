@@ -28,7 +28,7 @@ exports.seed = function(knex, Promise) {
           address: "405 Dunsmuir St",
           city: "Vancouver",
           country: "Canada",
-          phone: "+16048994581",
+          phone: "+16048996072",
           yelp_id: "tWjcnCAYZfkkQ1C3J_Zctw",
           longitude: -123.113500,
           latitude: 49.282068

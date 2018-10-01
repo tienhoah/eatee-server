@@ -78,6 +78,24 @@ module.exports = knex => {
       })
   })
 
+  //get redeemed total for a restaurant
+  router.get("/:id/redeem", (req,res) => {
+    knex
+      .count("*")
+      .from("coupon_details")
+      .join('coupon_batches', 'coupon_details.coupon_batch_id', '=', 'coupon_batches.id')
+      .join('restaurants', 'restaurants.id', '=', 'coupon_batches.restaurant_id')
+      .where({'restaurants.id':req.params.id})
+      .andWhere({'is_redeemed':true})
+      .then((results) => {
+        if (!results.length) {
+          res.json({error: "Not found"});
+        } else {
+          res.json(results);
+        }
+      })
+  })
+
   //get restaurant id
   router.get("/yelpid/:id", (req, res) => {
     knex
