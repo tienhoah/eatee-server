@@ -23,8 +23,9 @@ module.exports = knex => {
   });
 
   router.post("/", (req, res) => {
+    console.log("connect to post: /api/restaurants");
     knex("restaurants")
-      .returning("id")
+      .returning("*")
       .insert({
         name: req.body.name,
         Yelp_image_URL: req.body.Yelp_image_URL,
@@ -83,9 +84,9 @@ module.exports = knex => {
     knex
       .count("*")
       .from("coupon_details")
-      .join('coupon_batches', 'coupon_details.coupon_batch_id', '=', 'coupon_batches.id')
-      .join('restaurants', 'restaurants.id', '=', 'coupon_batches.restaurant_id')
-      .where({'restaurants.id':req.params.id})
+      .join("coupon_batches", "coupon_details.coupon_batch_id", "=", "coupon_batches.id")
+      .join("restaurants", "restaurants.id", "=", "coupon_batches.restaurant_id")
+      .where({"restaurants.id":req.params.id})
       .andWhere({'is_redeemed':true})
       .then((results) => {
         if (!results.length) {
@@ -101,7 +102,7 @@ module.exports = knex => {
     knex
       .select("*")
       .from("restaurants")
-      .where({'restaurants.yelp_id':req.params.id})
+      .where({"restaurants.yelp_id":req.params.id})
       .then((results) => {
         res.json(results);
       });
@@ -114,7 +115,7 @@ module.exports = knex => {
       .join("coupon_batches", {
         "coupon_batches.restaurant_id": "restaurants.id"
       })
-      .where({ "coupon_batches.restaurant_id": req.params.id })
+      .where({"coupon_batches.restaurant_id": req.params.id })
       .then(results => {
         if (!results.length) {
           res.json({ error: "Not found" });
