@@ -52,6 +52,17 @@ module.exports = knex => {
       })
   })
 
+  //get impression count for a coupon batch
+  router.get("/:id/impression", (req, res) => {
+    knex
+      .select("impression")
+      .from("coupon_batches")
+      .where({'coupon_batches.id':req.params.id})
+      .then(results => {
+        res.json(results);
+      });
+  });
+
   router.post("/:id/coupon_details", (req, res) => {
     knex
       .returning("*")
