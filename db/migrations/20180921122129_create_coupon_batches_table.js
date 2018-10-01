@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.string("dish_name");
     table.string("description");
     table.datetime("timestamp");
-    table.integer("time_limit");
+    table.datetime("time_limit");
     table.string("quantity");
     table.string("image");
     table.float("price");
