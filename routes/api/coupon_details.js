@@ -13,6 +13,8 @@ module.exports = (knex) => {
       });
   });
 
+
+
   router.get("/users/:id", (req, res) => {
     knex
       .from("coupon_details")

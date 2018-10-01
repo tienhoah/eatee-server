@@ -44,6 +44,40 @@ module.exports = knex => {
       });
   });
 
+  //get swipe total for a restaurant
+  router.get("/:id/swipe", (req,res) => {
+    knex
+      .count("*")
+      .from('coupon_details')
+      .join('coupon_batches', 'coupon_details.coupon_batch_id', '=', 'coupon_batches.id')
+      .join('restaurants', 'restaurants.id', '=', 'coupon_batches.restaurant_id')
+      .where({'restaurants.id':req.params.id})
+      .andWhere({'swipe':true})
+      .then((results) => {
+        if (!results.length) {
+          res.json({error: "Not found"});
+        } else {
+          res.json(results);
+        }
+      })
+  })
+
+  //get impression total for a restaurant
+  router.get("/:id/impression", (req,res) => {
+    knex
+      .sum("impression")
+      .from("coupon_batches")
+      .join("restaurants", 'coupon_batches.restaurant_id', '=', 'restaurants.id')
+      .where({'restaurants.id':req.params.id})
+      .then((results) => {
+        if (!results.length) {
+          res.json({error: "Not found"});
+        } else {
+          res.json(results);
+        }
+      })
+  })
+
   //get restaurant id
   router.get("/yelpid/:id", (req, res) => {
     knex
