@@ -51,6 +51,7 @@ module.exports = (knex) => {
     .join('restaurants', 'coupon_batches.restaurant_id', '=', 'restaurants.id')
     .join('coupon_details', 'coupon_batches.id', '=', 'coupon_details.coupon_batch_id')
     .where({'coupon_details.user_facebook_id':req.params.id})
+    .andWhere({'coupon_details.is_redeemed':false})
     .then((results) => {
       if (!results.length) {
         res.json({error: "Not found"});

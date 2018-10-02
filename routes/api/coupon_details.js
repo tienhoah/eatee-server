@@ -19,6 +19,7 @@ module.exports = (knex) => {
     knex
       .from("coupon_details")
       .where({'user_facebook_id':req.params.id})
+      .andWhere({'is_redeemed':false})
       .count('id')
       .then((result) => {
         res.json(result);
