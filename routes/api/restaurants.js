@@ -37,6 +37,7 @@ module.exports = knex => {
         country: req.body.country,
         phone: req.body.phone,
         yelp_id: req.body.yelp_id,
+        price_range: req.body.price,
         longitude: req.body.longitude,
         latitude: req.body.latitude
       })
@@ -114,7 +115,6 @@ module.exports = knex => {
       .where({ "restaurants.id": req.params.id })
       .andWhere({ is_redeemed: true })
       .then(results => {
-
         if (!results.length) {
           res.json({ error: "Not found" });
         } else {
@@ -142,7 +142,7 @@ module.exports = knex => {
       .join("coupon_batches", {
         "coupon_batches.restaurant_id": "restaurants.id"
       })
-      .where({"coupon_batches.restaurant_id": req.params.id })
+      .where({ "coupon_batches.restaurant_id": req.params.id })
       .then(results => {
         if (!results.length) {
           res.json({ error: "Not found" });
