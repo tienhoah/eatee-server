@@ -77,7 +77,7 @@ exports.seed = function(knex, Promise) {
           description: "Our signatue Tonkotsu Pork Broth",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
-          quantity: 13,
+          quantity: 7,
           image:
             "https://s3-media2.fl.yelpcdn.com/bphoto/MgpaE4PofVUSrGAREMe03g/o.jpg",
           price: 12.99,
@@ -90,7 +90,7 @@ exports.seed = function(knex, Promise) {
           description: "Please note that Takana is slightly spicy.",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
-          quantity: 8,
+          quantity: 4,
           image:
             "https://s3-media1.fl.yelpcdn.com/bphoto/ha6r3d3w_i5EfpGVdR7IKA/o.jpg",
           price: 12.99,
@@ -116,7 +116,7 @@ exports.seed = function(knex, Promise) {
           description: "Limited time only, applies to all food.",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
-          quantity: 12,
+          quantity: 2,
           image:
             "https://s3-media2.fl.yelpcdn.com/bphoto/HX1pOeE78u0tPdXNO1IXXQ/o.jpg",
           price: 14.99,
