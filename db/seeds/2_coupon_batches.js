@@ -6,82 +6,123 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex("coupon_batches").insert([
         {
-          dish_name: "Burger & Onion Ring",
-          description: "Yummy burger",
+          dish_name: "Mediterranean Stuffed Chicken Breast",
+          description:
+            "mushrooms, goat cheese, olive oil, crushed roasted potatoes, seasonal veggies, cream sauce",
           timestamp: new Date("2017-07-18T20:50:53+04:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
           quantity: 5,
           image:
-            "https://s3-media3.fl.yelpcdn.com/bphoto/7QeS0vT_EKBRbAdGZwqfmg/o.jpg",
-          price: 9.99,
-          discount: 25,
+            "https://s3-media3.fl.yelpcdn.com/bphoto/j-nw5zSww_-qmkIF0dJvXg/o.jpg",
+          price: 22,
+          discount: 20,
           impression: 43,
-          restaurant_id: 3
+          restaurant_id: 1
         },
         {
-          dish_name: "Soy Chicken",
-          description: "Yasssss",
+          dish_name: "Cavo Sangria",
+          description: "red or white with seasonal fruit",
           timestamp: new Date("2010-03-09T20:36:59-07:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
           quantity: 4,
           image:
-            "https://s3-media2.fl.yelpcdn.com/bphoto/EeCeMhsA04PAscAc5uMPrw/o.jpg",
-          price: 13.1,
-          discount: 15,
+            "https://s3-media1.fl.yelpcdn.com/bphoto/4fL2YMCBOrT5X_fQFtQCaw/o.jpg",
+          price: 10,
+          discount: 20,
           impression: 22,
           restaurant_id: 1
         },
         {
-          dish_name: "Kimchi Fried Rice",
-          description: "Delicious and good for your gut",
+          dish_name: "Aburi Chirashi Tart",
+          description:
+            "layers of sushi rice, spicy tuna, avocado, sockeye salmon, Miku sauce, flame seared and topped with prawn, scallop, maguro, tobiko and ikura",
           timestamp: new Date("2014-01-11T03:54:50+01:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
           quantity: 4,
           image:
-            "https://s3-media1.fl.yelpcdn.com/bphoto/Sxp4hcIGvNYwDbulO2MsjA/o.jpg",
-          price: 8.99,
-          discount: 20,
+            "https://s3-media2.fl.yelpcdn.com/bphoto/IB9LAk7giR6ozSKi1U6LPg/o.jpg",
+          price: 24,
+          discount: 5,
           impression: 62,
-          restaurant_id: 1
+          restaurant_id: 2
         },
         {
-          dish_name: "Asian Noodle Salad",
-          description: "Asian salad is a juxtaposition",
+          dish_name: "Moscow Mule",
+          description: "Russian Standard vodka, lime juice and ginger beer",
           timestamp: new Date("2017-06-28T16:16:51+08:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
           quantity: 3,
           image:
-            "https://s3-media4.fl.yelpcdn.com/bphoto/Qjz8UJXyr2-fyTUluP1ahg/o.jpg",
-          price: 14.99,
+            "https://s3-media3.fl.yelpcdn.com/bphoto/ZaZh6c76xdOCeHH0zIZNCw/o.jpg",
+          price: 14,
           discount: 15,
           impression: 70,
-          restaurant_id: 2
+          restaurant_id: 3
         },
         {
-          dish_name: "Fish and Chips",
-          description: "It's actually just fries. We're in Canada",
+          dish_name: "Matcha Gateaux Chocolate Parfait",
+          description: "with agar and matcha pudding",
           timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
           quantity: 3,
           image:
-            "https://s3-media3.fl.yelpcdn.com/bphoto/hnIcocHcAkukLivJ4HQW0w/o.jpg",
-          price: 12.99,
-          discount: 25,
+            "https://s3-media1.fl.yelpcdn.com/bphoto/XGFxjzPwsWjPazkHZxKcpg/o.jpg",
+          price: 9.99,
+          discount: 20,
           impression: 24,
-          restaurant_id: 2
+          restaurant_id: 4
         },
         {
-          dish_name: "Zoo Sticks",
-          description: "Fresh from the zoo",
-          timestamp: new Date("2022-11-20T06:56:01-08:00").toISOString(),
+          dish_name: "Classic Ramen",
+          description: "Our signatue Tonkotsu Pork Broth",
+          timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
           time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
-          quantity: 2,
+          quantity: 13,
           image:
-            "https://s3-media2.fl.yelpcdn.com/bphoto/-Xocuyeu8G8YJLaa97UZ7A/o.jpg",
-          price: 7.99,
-          discount: 50,
-          impression: 79,
-          restaurant_id: 2
+            "https://s3-media2.fl.yelpcdn.com/bphoto/MgpaE4PofVUSrGAREMe03g/o.jpg",
+          price: 12.99,
+          discount: 20,
+          impression: 109,
+          restaurant_id: 5
+        },
+        {
+          dish_name: "Chashu Pork & Takana Donburi",
+          description: "Please note that Takana is slightly spicy.",
+          timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
+          time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
+          quantity: 8,
+          image:
+            "https://s3-media1.fl.yelpcdn.com/bphoto/ha6r3d3w_i5EfpGVdR7IKA/o.jpg",
+          price: 12.99,
+          discount: 20,
+          impression: 49,
+          restaurant_id: 5
+        },
+        {
+          dish_name: "Chorizo Quesadilla",
+          description: "Comes with Beef Chimichanga, Rice, Beans, & Salad",
+          timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
+          time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
+          quantity: 3,
+          image:
+            "https://s3-media1.fl.yelpcdn.com/bphoto/atUfQfDS1Ijn1chciTfqmQ/o.jpg",
+          price: 14.99,
+          discount: 40,
+          impression: 20,
+          restaurant_id: 6
+        },
+        {
+          dish_name: "Lunch Buffet Special",
+          description: "Limited time only, applies to all food.",
+          timestamp: new Date("2026-11-28T23:09:56-09:00").toISOString(),
+          time_limit: new Date("2019-07-18T20:50:53+04:00").toISOString(),
+          quantity: 12,
+          image:
+            "https://s3-media2.fl.yelpcdn.com/bphoto/HX1pOeE78u0tPdXNO1IXXQ/o.jpg",
+          price: 14.99,
+          discount: 15,
+          impression: 90,
+          restaurant_id: 7
         }
       ]);
     });
